@@ -28,30 +28,9 @@ import jsonClasses.LibroDB;
 
 @Path("/libreria")
 public class ServletRest {
-
-	@GET
-	@Path("/societa")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getSocietyJSON() {
-
-		String r = "";
-		java.nio.file.Path path = Paths.get(
-				"C:\\Users\\Onix\\Documents\\2022.04.26 - Progetto Test Micra EAR (Eclipse 2020-06)\\micraWebApp\\src\\resources\\jsonUnicoSociSocieta.json");
-
-		try {
-
-			Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
-
-			r = new JsonParser().parse(reader).toString();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return Response.ok(r).build();
-
-	}
-
+	
+	//deleted get method for societ√† json
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getListaLibri() {
@@ -70,9 +49,9 @@ public class ServletRest {
 				r = "Nessun libro in lista";
 			}
 		} catch (NamingException ex) {
-			r = "Si Ë verificato un errore Naming";
+			r = "Si √® verificato un errore Naming";
 		} catch (SQLException ex) {
-			r = "Si Ë verificato un errore SQL";
+			r = "Si √® verificato un errore SQL";
 		}
 
 		return Response.ok(r).build();
@@ -97,9 +76,9 @@ public class ServletRest {
 				r = "Nessun libro trovato";
 			}
 		} catch (NamingException ex) {
-			r = "Si Ë verificato un errore Naming";
+			r = "Si √® verificato un errore Naming";
 		} catch (SQLException ex) {
-			r = "Si Ë verificato un errore SQL";
+			r = "Si √® verificato un errore SQL";
 		}
 
 		return Response.ok(r).build();
