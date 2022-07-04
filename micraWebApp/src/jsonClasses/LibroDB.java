@@ -9,7 +9,6 @@ import java.util.List;
 
 import javax.naming.NamingException;
 
-import model.CategoriaLibro;
 import model.DB;
 
 public class LibroDB {
