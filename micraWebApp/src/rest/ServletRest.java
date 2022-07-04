@@ -22,6 +22,7 @@ import jsonClasses.LibroDB;
 public class ServletRest {
 	
 	//ripulite librerie non usate
+	//commento prima push
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
