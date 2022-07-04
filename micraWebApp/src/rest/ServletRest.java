@@ -21,7 +21,7 @@ import jsonClasses.LibroDB;
 @Path("/libreria")
 public class ServletRest {
 	
-	//ripulite librerie non usate, aggiustati accenti
+	//ripulite librerie non usate
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
