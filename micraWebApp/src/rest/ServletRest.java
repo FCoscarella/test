@@ -20,9 +20,14 @@ import jsonClasses.LibroDB;
 
 @Path("/libreria")
 public class ServletRest {
-	
+  
+  //modifica1
 	//ripulite librerie non usate
 	//commento prima push
+  
+  //modifica 2
+  //ripulite librerie non usate, aggiustati accenti
+	//altra modifica
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
