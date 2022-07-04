@@ -29,6 +29,8 @@ public class ServletRest {
   //ripulite librerie non usate, aggiustati accenti
 	//altra modifica
 	
+	//modifica 3
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getListaLibri() {
