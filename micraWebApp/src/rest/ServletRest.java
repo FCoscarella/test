@@ -1,12 +1,5 @@
 package rest;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -20,8 +13,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
+import com.google.gson.GsonBuilder;
 
 import jsonClasses.Libro;
 import jsonClasses.LibroDB;
@@ -29,7 +21,7 @@ import jsonClasses.LibroDB;
 @Path("/libreria")
 public class ServletRest {
 	
-	//deleted get method for società json
+	//ripulite librerie non usate, aggiustati accenti
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -49,9 +41,9 @@ public class ServletRest {
 				r = "Nessun libro in lista";
 			}
 		} catch (NamingException ex) {
-			r = "Si è verificato un errore Naming";
+			r = "Si e' verificato un errore Naming";
 		} catch (SQLException ex) {
-			r = "Si è verificato un errore SQL";
+			r = "Si e' verificato un errore SQL";
 		}
 
 		return Response.ok(r).build();
