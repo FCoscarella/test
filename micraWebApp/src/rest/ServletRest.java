@@ -68,9 +68,9 @@ public class ServletRest {
 				r = "Nessun libro trovato";
 			}
 		} catch (NamingException ex) {
-			r = "Si è verificato un errore Naming";
+			r = "Si e' verificato un errore Naming";
 		} catch (SQLException ex) {
-			r = "Si è verificato un errore SQL";
+			r = "Si e' verificato un errore SQL";
 		}
 
 		return Response.ok(r).build();
